@@ -12,16 +12,16 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Amount.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<Amount>
 
     var body: some View {
         #if os(iOS)
         NavigationView {
             List {
                 ForEach(items) { item in
-                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                    Text("Item at \(item.timestamp!, formatter: itemFormatter); amount: \(item.amount ?? 0.0)")
                 }
                 .onDelete(perform: deleteItems)
             }
@@ -46,10 +46,17 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
             do {
+                let newItem = Item(context: viewContext)
+                let newAmount = Amount(context: viewContext)
+                let timestamp = Date()
+                newItem.timestamp = timestamp
+                newItem.id = UUID().uuidString
+                newAmount.timestamp = timestamp
+                newAmount.amount = NSDecimalNumber(value: Double.random(in: -1000000.00..<1000000.00))
+                newAmount.id = UUID().uuidString
+                newItem.dataid = newAmount.id
+                newItem.data = try JSONEncoder().encode(newAmount).base64EncodedString()
                 try viewContext.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.

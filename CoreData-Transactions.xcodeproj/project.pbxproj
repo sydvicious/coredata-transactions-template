@@ -19,6 +19,8 @@
 		62B4A4D82585A618003FDA1E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B4A4A92585A617003FDA1E /* Persistence.swift */; };
 		62B4A4D92585A618003FDA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B4A4AA2585A617003FDA1E /* Assets.xcassets */; };
 		62B4A4DA2585A618003FDA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B4A4AA2585A617003FDA1E /* Assets.xcassets */; };
+		62E05D712596F7B8002D0CF7 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D702596F7B8002D0CF7 /* Amount.swift */; };
+		62E05D722596F7B8002D0CF7 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D702596F7B8002D0CF7 /* Amount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		62B4A4CA2585A617003FDA1E /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B4A4CE2585A617003FDA1E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		62B4A4D02585A617003FDA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62E05D612596EAFF002D0CF7 /* With JSON.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "With JSON.xcdatamodel"; sourceTree = "<group>"; };
+		62E05D702596F7B8002D0CF7 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		62B4A4A42585A616003FDA1E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				62E05D6F2596F79D002D0CF7 /* Data Models */,
 				62B4A4A72585A617003FDA1E /* CoreData_TransactionsApp.swift */,
 				62B4A4A82585A617003FDA1E /* ContentView.swift */,
 				62B4A4A92585A617003FDA1E /* Persistence.swift */,
@@ -157,6 +162,14 @@
 				62B4A4D02585A617003FDA1E /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		62E05D6F2596F79D002D0CF7 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				62E05D702596F7B8002D0CF7 /* Amount.swift */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E05D712596F7B8002D0CF7 /* Amount.swift in Sources */,
 				62B4A4D12585A618003FDA1E /* CoreData_Transactions.xcdatamodeld in Sources */,
 				62B4A4D72585A618003FDA1E /* Persistence.swift in Sources */,
 				62B4A4D32585A618003FDA1E /* CoreData_TransactionsApp.swift in Sources */,
@@ -327,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E05D722596F7B8002D0CF7 /* Amount.swift in Sources */,
 				62B4A4D22585A618003FDA1E /* CoreData_Transactions.xcdatamodeld in Sources */,
 				62B4A4D82585A618003FDA1E /* Persistence.swift in Sources */,
 				62B4A4D42585A618003FDA1E /* CoreData_TransactionsApp.swift in Sources */,
@@ -715,9 +730,10 @@
 		62B4A4A52585A617003FDA1E /* CoreData_Transactions.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				62E05D612596EAFF002D0CF7 /* With JSON.xcdatamodel */,
 				62B4A4A62585A617003FDA1E /* Shared.xcdatamodel */,
 			);
-			currentVersion = 62B4A4A62585A617003FDA1E /* Shared.xcdatamodel */;
+			currentVersion = 62E05D612596EAFF002D0CF7 /* With JSON.xcdatamodel */;
 			path = CoreData_Transactions.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
