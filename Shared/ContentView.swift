@@ -47,16 +47,12 @@ struct ContentView: View {
     private func addItem() {
         withAnimation {
             do {
-                let newItem = Item(context: viewContext)
                 let newAmount = Amount(context: viewContext)
                 let timestamp = Date()
-                newItem.timestamp = timestamp
-                newItem.id = UUID().uuidString
                 newAmount.timestamp = timestamp
-                newAmount.amount = NSDecimalNumber(value: Double.random(in: -1000000.00..<1000000.00))
+                newAmount.amount = NSDecimalNumber(value: Int.random(in: -1000000..<1000000)).dividing(by: 100)
                 newAmount.id = UUID().uuidString
-                newItem.dataid = newAmount.id
-                newItem.data = try JSONEncoder().encode(newAmount).base64EncodedString()
+                try OutgoingItems.shared.add(newAmount)
                 try viewContext.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.

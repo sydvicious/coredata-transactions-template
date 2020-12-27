@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class Amount: NSManagedObject, Encodable, Decodable {
+class Amount: DataModel  {
     
     enum CodingKeys: CodingKey {
         case timestamp, id, amount
@@ -23,11 +23,22 @@ class Amount: NSManagedObject, Encodable, Decodable {
         self.amount = NSDecimalNumber(value: try container.decode(Double.self, forKey: .amount))
     }
     
-    func encode(to encoder: Encoder) throws {
+    override func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(timestamp, forKey: .id)
         try container.encode(id, forKey: .id)
         try container.encode(amount?.doubleValue, forKey: .amount)
     }
     
+    override func name() -> String {
+        return "Amount"
+    }
+    
+    override func getId() -> String {
+        return self.id!
+    }
+    
+    override func getTimestamp() -> Date {
+        return self.timestamp!
+    }
 }

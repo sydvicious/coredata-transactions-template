@@ -21,6 +21,10 @@
 		62B4A4DA2585A618003FDA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B4A4AA2585A617003FDA1E /* Assets.xcassets */; };
 		62E05D712596F7B8002D0CF7 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D702596F7B8002D0CF7 /* Amount.swift */; };
 		62E05D722596F7B8002D0CF7 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D702596F7B8002D0CF7 /* Amount.swift */; };
+		62E05D7C25970557002D0CF7 /* OutgoingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D7B25970557002D0CF7 /* OutgoingItems.swift */; };
+		62E05D7D25970557002D0CF7 /* OutgoingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D7B25970557002D0CF7 /* OutgoingItems.swift */; };
+		62E05D95259706E5002D0CF7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D94259706E5002D0CF7 /* DataModel.swift */; };
+		62E05D96259706E5002D0CF7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E05D94259706E5002D0CF7 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,8 @@
 		62B4A4D02585A617003FDA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62E05D612596EAFF002D0CF7 /* With JSON.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "With JSON.xcdatamodel"; sourceTree = "<group>"; };
 		62E05D702596F7B8002D0CF7 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		62E05D7B25970557002D0CF7 /* OutgoingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingItems.swift; sourceTree = "<group>"; };
+		62E05D94259706E5002D0CF7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 				62B4A4A92585A617003FDA1E /* Persistence.swift */,
 				62B4A4AA2585A617003FDA1E /* Assets.xcassets */,
 				62B4A4A52585A617003FDA1E /* CoreData_Transactions.xcdatamodeld */,
+				62E05D7B25970557002D0CF7 /* OutgoingItems.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				62E05D702596F7B8002D0CF7 /* Amount.swift */,
+				62E05D94259706E5002D0CF7 /* DataModel.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -333,6 +341,8 @@
 				62B4A4D12585A618003FDA1E /* CoreData_Transactions.xcdatamodeld in Sources */,
 				62B4A4D72585A618003FDA1E /* Persistence.swift in Sources */,
 				62B4A4D32585A618003FDA1E /* CoreData_TransactionsApp.swift in Sources */,
+				62E05D95259706E5002D0CF7 /* DataModel.swift in Sources */,
+				62E05D7C25970557002D0CF7 /* OutgoingItems.swift in Sources */,
 				62B4A4D52585A618003FDA1E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +355,8 @@
 				62B4A4D22585A618003FDA1E /* CoreData_Transactions.xcdatamodeld in Sources */,
 				62B4A4D82585A618003FDA1E /* Persistence.swift in Sources */,
 				62B4A4D42585A618003FDA1E /* CoreData_TransactionsApp.swift in Sources */,
+				62E05D96259706E5002D0CF7 /* DataModel.swift in Sources */,
+				62E05D7D25970557002D0CF7 /* OutgoingItems.swift in Sources */,
 				62B4A4D62585A618003FDA1E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
